@@ -41,5 +41,6 @@ return array(
     'contacts' => 'site/contact',
     'about' => 'site/about',
     // Главная страница
+    'index.php' => 'site/index', // actionIndex в SiteController
     '' => 'site/index', // actionIndex в SiteController
 );
