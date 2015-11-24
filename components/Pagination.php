@@ -147,7 +147,6 @@ class Pagination
         if ($start + $this->max <= $this->amount) {
         # Назначаем конец цикла вперёд на $this->max страниц или просто на минимум
             $end = $start > 1 ? $start + $this->max : $this->max;
-            echo $end;
         } else {
             # Конец - общее количество страниц
             $end = $this->amount;
