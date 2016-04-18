@@ -113,16 +113,13 @@ class AdminProductController extends AdminBase
             // Сохраняем изменения
             if (Product::updateProductById($id, $options)) {
 
-                echo '<pre>';
-                print_r($_FILES["image"]);
-                echo '</pre>';
 
                 // Если запись сохранена
                 // Проверим, загружалось ли через форму изображение
                 if (is_uploaded_file($_FILES["image"]["tmp_name"])) {
 
                     // Если загружалось, переместим его в нужную папке, дадим новое имя
-                    var_dump(move_uploaded_file($_FILES["image"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/upload/images/products/{$id}.jpg"));
+                   move_uploaded_file($_FILES["image"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/upload/images/products/{$id}.jpg");
                 }
             }
 
