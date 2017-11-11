@@ -56,7 +56,7 @@ class Product
      */
     public static function getProductsListByCategory($categoryId, $page = 1)
     {
-        $limit = Product::SHOW_BY_DEFAULT;
+        $limit = self::SHOW_BY_DEFAULT;
         // Смещение (для запроса)
         $offset = ($page - 1) * self::SHOW_BY_DEFAULT;
 
